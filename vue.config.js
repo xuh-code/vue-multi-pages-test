@@ -30,24 +30,32 @@ console.log(pages)
 module.exports = {
     //禁用eslint
     lintOnSave: false,
-
-    baseUrl:'',
-    productionSourceMap: false,
+	
+    baseUrl: '',
+    productionSourceMap: true,
     pages,
 
     devServer: {
 		index: 'index.html', //默认启动serve 打开index页面
+		
 		open: process.platform === 'darwin',
 		host: '',
-		port: 8088,
+		port: 9999,
 		https: false,
 		hotOnly: false,
 		proxy: {
-			'/auth/': {
-				target: 'http://auth.xuh.com/',
+			'/xrf/': {
+				target: 'http://reg.tool.hexun.com/',
 				changeOrigin: true,
 				pathRewrite: {
-					'^/auth': ''
+					'^/xrf': ''
+				}
+			},
+			'/wa/': {
+				target: 'http://api.match.hexun.com/',
+				changeOrigin: true,
+				pathRewrite: {
+					'^/wa': ''
 				}
 			}
 		}, // 设置代理
@@ -75,18 +83,18 @@ module.exports = {
 		}
 	},
 
-    configureWebpack: config => {
-		if(process.env.NODE_ENV === "production") {
-			config.output = {
-				path: path.join(__dirname, "./dist"),
-				filename: "js/[name].[contenthash:8].js"			
-			};
-		}
-	},
+//     configureWebpack: config => {
+// 		if(process.env.NODE_ENV === "production") {
+// 			config.output = {
+// 				path: path.join(__dirname, "./dist"),
+// 				filename: "js/[name].[contenthash:8].js"			
+// 			};
+// 		}
+// 	},
 
-    outputDir: undefined,
-    assetsDir: undefined,
-    runtimeCompiler: undefined,
-    parallel: undefined,
-    css: undefined
+//     outputDir: undefined,
+//     assetsDir: undefined,
+//     runtimeCompiler: undefined,
+//     parallel: undefined,
+//     css: undefined
 }

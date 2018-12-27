@@ -29,7 +29,7 @@ console.log(pages)
 
 module.exports = {
     //禁用eslint
-    lintOnSave: false,
+    lintOnSave: true,
 	
     baseUrl: '',
     productionSourceMap: true,
@@ -83,6 +83,16 @@ module.exports = {
 		}
 	},
 
+	configureWebpack: {
+		module: {
+		  rules: [
+			{
+			  include: path.resolve('node_modules', 'bootstrap-vue'),
+			  sideEffects: false
+			}
+		  ]
+		}
+	  }
 //     configureWebpack: config => {
 // 		if(process.env.NODE_ENV === "production") {
 // 			config.output = {

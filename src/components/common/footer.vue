@@ -84,7 +84,7 @@
 	}
 
 	#footer img {
-		weight: 150px;
+		/* weight: 150px; */
 		height: 150px;
 	}
 

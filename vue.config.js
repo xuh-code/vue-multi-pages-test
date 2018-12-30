@@ -1,110 +1,126 @@
 let path = require('path')
 let glob = require('glob')
+const webpack = require('webpack')
+
 //配置pages多页面获取当前文件夹下的html和js
 function getEntry(globPath) {
-	let entries = {},
-		basename, tmp, pathname, appname;
+  let entries = {},
+    basename,
+    tmp,
+    pathname,
+    appname
 
-	glob.sync(globPath).forEach(function(entry) {
-		basename = path.basename(entry, path.extname(entry));
-		// console.log(entry)
-		tmp = entry.split('/').splice(-3);
-		console.log(tmp)
-		pathname = basename; // 正确输出js和html的路径
+  glob.sync(globPath).forEach(function(entry) {
+    basename = path.basename(entry, path.extname(entry))
+    // console.log(entry)
+    tmp = entry.split('/').splice(-3)
+    console.log(tmp)
+    pathname = basename // 正确输出js和html的路径
 
-		// console.log(pathname)
-		entries[pathname] = {
-			entry: 'src/' + tmp[0] + '/' + tmp[1] + '/' + tmp[1] + '.js',
-			template: 'src/' + tmp[0] + '/' + tmp[1] + '/' + tmp[2],
-			title:  tmp[2],
-			filename: tmp[2]
-		};
-	});
-	return entries;
+    // console.log(pathname)
+    entries[pathname] = {
+      entry: 'src/' + tmp[0] + '/' + tmp[1] + '/' + tmp[1] + '.js',
+      template: 'src/' + tmp[0] + '/' + tmp[1] + '/' + tmp[2],
+      title: tmp[2],
+      filename: tmp[2]
+    }
+  })
+  return entries
 }
 
-let pages = getEntry('./src/pages/**?/*.html');
+let pages = getEntry('./src/pages/**?/*.html')
 console.log(pages)
 //配置end
 
 module.exports = {
-    //禁用eslint
-    lintOnSave: true,
-	
-    baseUrl: '',
-    productionSourceMap: true,
-    pages,
+  //禁用eslint
+  lintOnSave: true,
 
-    devServer: {
-		index: 'index.html', //默认启动serve 打开index页面
-		
-		open: process.platform === 'darwin',
-		host: '',
-		port: 9999,
-		https: false,
-		hotOnly: false,
-		proxy: {
-			'/xrf/': {
-				target: 'http://reg.tool.hexun.com/',
-				changeOrigin: true,
-				pathRewrite: {
-					'^/xrf': ''
-				}
-			},
-			'/wa/': {
-				target: 'http://api.match.hexun.com/',
-				changeOrigin: true,
-				pathRewrite: {
-					'^/wa': ''
-				}
-			}
-		}, // 设置代理
-		before: app => {}
-	},
+  baseUrl: '',
+  productionSourceMap: true,
+  pages,
 
-    chainWebpack: config => {
-		config.module
-			.rule('images')
-			.use('url-loader')
-			.loader('url-loader')
-			.tap(options => {
-				// 修改它的选项...
-				options.limit = 100
-				return options
-			})
-		Object.keys(pages).forEach(entryName => {
-			config.plugins.delete(`prefetch-${entryName}`);
-		});
-		if(process.env.NODE_ENV === "production") {
-			config.plugin("extract-css").tap(() => [{
-				path: path.join(__dirname, "./dist"),
-				filename: "css/[name].[contenthash:8].css"
-			}]);
-		}
-	},
+  devServer: {
+    index: 'index.html', //默认启动serve 打开index页面
 
-	configureWebpack: {
-		module: {
-		  rules: [
-			{
-			  include: path.resolve('node_modules', 'bootstrap-vue'),
-			  sideEffects: false
-			}
-		  ]
-		}
-	  }
-//     configureWebpack: config => {
-// 		if(process.env.NODE_ENV === "production") {
-// 			config.output = {
-// 				path: path.join(__dirname, "./dist"),
-// 				filename: "js/[name].[contenthash:8].js"			
-// 			};
-// 		}
-// 	},
+    open: process.platform === 'darwin',
+    host: '',
+    port: 9999,
+    https: false,
+    hotOnly: false,
+    proxy: {
+      '/xrf/': {
+        target: 'http://reg.tool.hexun.com/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/xrf': ''
+        }
+      },
+      '/wa/': {
+        target: 'http://api.match.hexun.com/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/wa': ''
+        }
+      }
+    }, // 设置代理
+    before: app => {}
+  },
 
-//     outputDir: undefined,
-//     assetsDir: undefined,
-//     runtimeCompiler: undefined,
-//     parallel: undefined,
-//     css: undefined
+  chainWebpack: config => {
+    config.module
+      .rule('images')
+      .use('url-loader')
+      .loader('url-loader')
+      .tap(options => {
+        // 修改它的选项...
+        options.limit = 100
+        return options
+      })
+    Object.keys(pages).forEach(entryName => {
+      config.plugins.delete(`prefetch-${entryName}`)
+    })
+    if (process.env.NODE_ENV === 'production') {
+      config.plugin('extract-css').tap(() => [
+        {
+          path: path.join(__dirname, './dist'),
+          filename: 'css/[name].[contenthash:8].css'
+        }
+      ])
+    }
+  },
+
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          include: path.resolve('node_modules', 'bootstrap-vue'),
+          sideEffects: false
+        }
+      ]
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+
+        jQuery: 'jquery',
+
+        'windows.jQuery': 'jquery'
+      })
+    ]
+  }
+  //     configureWebpack: config => {
+  // 		if(process.env.NODE_ENV === "production") {
+  // 			config.output = {
+  // 				path: path.join(__dirname, "./dist"),
+  // 				filename: "js/[name].[contenthash:8].js"
+  // 			};
+  // 		}
+  // 	},
+
+  //     outputDir: undefined,
+  //     assetsDir: undefined,
+  //     runtimeCompiler: undefined,
+  //     parallel: undefined,
+  //     css: undefined
 }

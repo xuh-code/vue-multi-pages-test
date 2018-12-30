@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './index.vue'
 // import store from './store'
 import router from './router'
+import axios from 'axios'
 
 // 导入bootstrap
 import 'bootstrap337/dist/css/bootstrap.min.css'
@@ -16,6 +17,7 @@ import PageFooter from '@/components/common/footer'
 import $ from 'jquery'
 Vue.use($)
 Vue.config.productionTip = false
+Vue.prototype.$http = axios
 
 Vue.component('page-header', PageHeader)
 Vue.component('page-footer', PageFooter)

@@ -2,7 +2,7 @@
   <div id="app">
     <page-header></page-header>
     <section id="main-slider">
-      <div id="carouselDemo" class="carousel" data-ride="carousel">
+      <div id="carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselDemo" data-slide-to="0" class="active"></li>
           <li data-target="#carouselDemo" data-slide-to="1"></li>
@@ -17,6 +17,15 @@
             <img src="@/assets/images/background/bj2.jpg" alt="Third slide">
           </div>
         </div>
+        <!-- Controls -->
+        <!-- <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-control glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+          <span class="glyphicon  glyphicon-control glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a> -->
       </div>
     </section>
 
@@ -444,6 +453,11 @@
 </template>
 
 <script>
+export default {
+  data() {
+    return {}
+  }
+}
 </script>
 
 <style>

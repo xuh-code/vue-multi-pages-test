@@ -16,7 +16,7 @@
 						<ul class="nav navbar-nav">
 							<li class="scroll active"><a href="/">首页</a></li>
 							<li class="scroll"><a href="features">走进佳博</a></li>
-							<li class="scroll"><a href="services.html">技术服务</a></li>
+							<li class="scroll"><a href="service.html">技术服务</a></li>
 							<li class="scroll"><a href="product">产品中心</a></li>
 							<li class="scroll"><a href="news">新闻资讯</a></li>
 							<li class="scroll"><a href="content">联系我们</a></li>

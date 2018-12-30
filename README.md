@@ -16,13 +16,13 @@ vue create 项目名
 
 或者使用 vue ui 命令启动界面
 
-![1546143779315](E:\mvnproject\com.jiabo.vue\README.assets\1546143779315.png)
+![1546143779315](.\README.assets\1546143779315.png)
 
 
 
 ### 管理依赖
 
-**![1546143833053](E:\mvnproject\com.jiabo.vue\README.assets\1546143833053.png)**
+**![1546143833053](.\README.assets\1546143833053.png)**
 
 
 
@@ -30,7 +30,7 @@ vue create 项目名
 
 修改项目结构
 
-![1546144226394](E:\mvnproject\com.jiabo.vue\README.assets\1546144226394.png)
+![1546144226394](.\README.assets\1546144226394.png)
 
 ```
 let path = require('path')
@@ -168,7 +168,7 @@ module.exports = {
 
 package.json中找到eslintConfig 添加"jquery": true
 
-![1546144304192](E:\mvnproject\com.jiabo.vue\README.assets\1546144304192.png)
+![1546144304192](.\README.assets\1546144304192.png)
 
 
 

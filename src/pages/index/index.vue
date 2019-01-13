@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <page-header></page-header>
+    <page-header :menu_value="menu"></page-header>
     <section id="main-slider">
       <div id="carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -335,7 +335,7 @@
                 <a class="btn-more hover-effect" href="/blog/view/destination-profile---germany">read more +</a>
               </div>
               <div class="caption">
-                <h3><a class="hover-effect" href="/blog/view/destination-profile---germany">GermanyGermanyGermanyGermanyGermanyGermanyGermanyGerma</a></h3>
+                <h3><a class="hover-effect" href="/blog/view/destination-profile---germany">GermanyGermanyGer</a></h3>
                 <p>Being Europe’s first and the world’s 4th largest economy, with the second to lowest une...</p>
               </div>
             </div>
@@ -453,20 +453,21 @@
 </template>
 
 <script>
+import pageHeader from '@/components/common/Header'
+import pageFooter from '@/components/common/footer'
+
 export default {
   data() {
-    return {}
+    return {
+      menu: 1,
+    }
+  },
+  components: {
+    pageHeader,
+    pageFooter
   }
 }
 </script>
 
 <style>
-/* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
 </style>

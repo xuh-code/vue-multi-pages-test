@@ -10,6 +10,7 @@
   "dependencies": {
     "bootstrap337": "^3.3.7",
     "vue": "^2.5.17",
+    "vue-baidu-map": "^0.21.16",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

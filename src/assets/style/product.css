@@ -1,0 +1,421 @@
+ul, li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* product Filter Section */
+.property-filter-section .mixitup-gallery .filters .filter-tabs {
+  position: relative;
+}
+
+.property-filter-section .mixitup-gallery .filters li {
+  position: relative;
+  float: left;
+  font-size: 14px;
+  line-height: 24px;
+  color: #2b2b2b;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin-left: 30px;
+  font-family: "Raleway", sans-serif;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.property-filter-section .mixitup-gallery .filters li:first-child {
+  margin-left: 0;
+}
+
+.property-filter-section .mixitup-gallery .filters li:first-child:before {
+  display: none;
+}
+
+.property-filter-section .mixitup-gallery .filters li.active,
+.property-filter-section .mixitup-gallery .filters li:hover {
+  color: #00c0ff;
+}
+
+.property-filter-section .property-block {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.property-filter-section .property-block.mix {
+  display: none;
+}
+
+.property-filter-section .styled-pagination {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.property-filter-section .property-block .image-box .info {
+  bottom: 45px;
+}
+
+.property-filter-section .load-more-btn {
+  margin-bottom: 60px;
+}
+
+/* product Filter Section */
+
+/* content样式 */
+.auto-container {
+  position: static;
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+
+.property-filter-section .mixitup-gallery .filters .filter-tabs {
+  position: relative;
+}
+
+.property-filter-section .mixitup-gallery .filters li {
+  position: relative;
+  float: left;
+  font-size: 14px;
+  line-height: 24px;
+  color: #2b2b2b;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin-left: 30px;
+  font-family: "Raleway", sans-serif;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.property-filter-section .mixitup-gallery .filters li:first-child {
+  margin-left: 0;
+}
+
+.property-filter-section .mixitup-gallery .filters li:first-child:before {
+  display: none;
+}
+
+.property-filter-section .mixitup-gallery .filters li.active,
+.property-filter-section .mixitup-gallery .filters li:hover {
+  color: #00c0ff;
+}
+
+/* content样式 */
+
+/* sec-title */
+
+.sec-title {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 40px;
+}
+
+.sec-title:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 4px;
+  background-color: #00c0ff;
+  content: '';
+}
+
+.sec-title:after {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  height: 40px;
+  width: 2px;
+  background-color: #00c0ff;
+  content: '';
+}
+
+.sec-title .title {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  line-height: 1.2em;
+  color: #00c0ff;
+  font-weight: 700;
+  top: -4px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.sec-title h2 {
+  position: relative;
+  display: block;
+  font-size: 34px;
+  line-height: 1.2em;
+  color: #1a1d1f;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0px;
+  background: none;
+}
+
+.sec-title .text {
+  position: relative;
+  font-size: 18px;
+  line-height: 29px;
+  color: #888888;
+  font-weight: 300;
+  margin-top: 18px;
+}
+
+.sec-title .light h2 {
+  color: #ffffff;
+}
+
+
+/* sec-title */
+
+/* 产品中心标题 */
+.property-filter-section {
+  position: relative;
+  padding: 120px 0 60px;
+}
+
+.property-filter-section .upper-box {
+  position: relative;
+}
+
+.property-filter-section .upper-box .sec-title {
+  float: left;
+}
+
+.property-filter-section .upper-box .filters {
+  float: right;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.property-filter-section .mixitup-gallery .filters .filter-tabs {
+  position: relative;
+}
+
+.property-filter-section .mixitup-gallery .filters li {
+  position: relative;
+  float: left;
+  font-size: 14px;
+  line-height: 24px;
+  color: #2b2b2b;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin-left: 30px;
+  font-family: "Raleway", sans-serif;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.property-filter-section .mixitup-gallery .filters li:first-child {
+  margin-left: 0;
+}
+
+.property-filter-section .mixitup-gallery .filters li:first-child:before {
+  display: none;
+}
+
+.property-filter-section .mixitup-gallery .filters li.active,
+.property-filter-section .mixitup-gallery .filters li:hover {
+  color: #00c0ff;
+}
+
+.property-filter-section .property-block {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.property-filter-section .property-block.mix {
+  display: none;
+}
+
+.property-filter-section .styled-pagination {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.property-filter-section .property-block .image-box .info {
+  bottom: 45px;
+}
+
+.property-filter-section .load-more-btn {
+  margin-bottom: 60px;
+}
+/* 产品中心标题 */
+
+/* product list */
+
+.property-block {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.property-block .inner-box {
+  position: relative;
+}
+
+.property-block .image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.property-block .image-box .image {
+  position: relative;
+  margin: 0;
+}
+
+.property-block .image-box .image a {
+  position: relative;
+  display: block;
+  z-index: 9;
+}
+
+.property-block .image-box .image:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 40%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(34, 34, 34, 0) 0%, rgba(34, 34, 34, 0.99) 99%, rgba(34, 34, 34, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(34, 34, 34, 0) 0%, rgba(34, 34, 34, 0.99) 99%, rgba(34, 34, 34, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(34, 34, 34, 0) 0%, rgba(34, 34, 34, 0.99) 99%, rgba(34, 34, 34, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00222222', endColorstr='#222222', GradientType=0);
+  /* IE6-9 */
+  content: "";
+  z-index: 99;
+}
+
+.property-block .image-box .image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.property-block .image-box .info {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 99;
+}
+
+.property-block .image-box .info li {
+  position: relative;
+  float: right;
+  text-align: right;
+  width: 100%;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  font-weight: 400;
+  z-index: 9;
+  margin-bottom: 8px;
+}
+
+.property-block .image-box .info li i {
+  display: inline-block;
+  font-size: 16px;
+  color: #00c0ff;
+  margin-right: 8px;
+}
+
+.property-block .image-box .info li a {
+  color: #ffffff;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.property-block .image-box .info li a:hover {
+  color: #00c0ff;
+}
+
+.property-block .lower-content {
+  position: relative;
+  padding: 20px 0 0;
+}
+
+.property-block h3 {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  line-height: 1.2em;
+  color: #222222;
+  font-weight: 700;
+  margin-bottom: 7px;
+  margin: 0px;
+  background: none;
+}
+
+.property-block h3 a {
+  color: #222222;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.property-block h3 a:hover {
+  color: #00c0ff;
+}
+
+.property-block .tags {
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.property-block .tags li {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
+  color: #00c0ff;
+  font-weight: 400;
+}
+
+.property-block .tags li a {
+  color: #00c0ff;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.property-block .tags li a:hover {
+  color: #222222;
+}
+
+.load-more-btn {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.load-more-btn a {
+  padding: 10px 30px;
+  line-height: 21px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+}
+/* product list */

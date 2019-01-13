@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './service.vue'
+import App from './about.vue'
 // import store from './store'
 import router from './router'
 import axios from 'axios'
@@ -10,7 +10,6 @@ import 'bootstrap337/dist/js/bootstrap.min.js'
 import '@/assets/style/main.css'
 import '@/assets/style/service.css'
 import '@/assets/style/font-awesome.min.css'
-
 
 // 导入jquery
 import $ from 'jquery'
